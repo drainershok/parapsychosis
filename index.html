@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff217d">
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+<title>parapsychosis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__row">
+    <a href="index.html" class="logo">parapsychosis</a>
+    <nav class="nav">
+      <a href="#stock">наличие</a>
+      <a href="archive.html">история</a>
+      <a href="delivery.html">доставка</a>
+      <a href="return.html">возврат</a>
+      <a href="offer.html">оферта</a>
+    </nav>
+    <div class="header__actions">
+      <div class="socials">
+        <a href="https://t.me/parapsychosis13" target="_blank" rel="noopener" aria-label="Телеграм" title="Телеграм">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17" aria-hidden="true"><path d="M21.7 3.4 2.9 10.6c-1 .4-1 1.9.1 2.2l4.6 1.4 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.9 4.7 3.5c.8.6 1.9.1 2.1-.8l3-14c.2-.9-.6-1.6-1.4-1.3z"/></svg>
+        </a>
+        <a href="https://vk.ru/club241979595" target="_blank" rel="noopener" aria-label="ВКонтакте" title="ВКонтакте">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" width="17" height="17" aria-hidden="true"><path d="M2.7 5.5 6.9 18.5 11.1 5.5M14.4 5.5v13M21.1 5.5l-6.7 7.9 6.9 5.1"/></svg>
+        </a>
+      </div>
+      <button class="icon-btn" id="cartBtn" aria-label="Корзина">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="icon-btn__count" id="cartCount">0</span>
+      </button>
+      <button class="gear" id="gearBtn" aria-label="Настройки" title="Настройки">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="wrap">
+    <div class="banner__logo">
+      <img class="logo-light" src="assets/img/logo-light.png?v=19" alt="parapsychosis" width="2250" height="600">
+      <img class="logo-dark" src="assets/img/logo-dark.png?v=19" alt="" aria-hidden="true" width="2250" height="600">
+    </div>
+  </div>
+</section>
+
+<!-- наличие -->
+<section id="stock">
+  <div class="wrap">
+    <div class="catalog__head" id="stockHead" hidden>
+      <div class="catalog__title">
+        <h2>наличие</h2>
+        <p id="stockMeta"></p>
+      </div>
+    </div>
+
+    <div class="filters" id="filters" hidden>
+      <div class="chips" id="catChips"></div>
+      <div class="filters__right">
+        <div class="select" id="sortSelect">
+          <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Сортировка">
+            <span class="select__value" id="sortLabel">сначала новые</span>
+            <svg class="select__caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="select__list" role="listbox" hidden>
+            <button class="select__opt is-active" type="button" role="option" aria-selected="true" data-value="new">сначала новые</button>
+            <button class="select__opt" type="button" role="option" aria-selected="false" data-value="cheap">дешевле</button>
+            <button class="select__opt" type="button" role="option" aria-selected="false" data-value="exp">дороже</button>
+          </div>
+        </div>
+        <input type="search" id="searchInput" placeholder="поиск" aria-label="Поиск">
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- история -->
+<section id="history">
+  <div class="wrap">
+    <div class="catalog__head">
+      <div class="catalog__title"><h2>история</h2></div>
+    </div>
+    <div class="history" id="historyList"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom">
+      <span>parapsychosis</span>
+      <div class="footer__links">
+        <a href="https://t.me/parapsychosis13" target="_blank" rel="noopener">телеграм</a>
+        <a href="https://vk.ru/club241979595" target="_blank" rel="noopener">вконтакте</a>
+      </div>
+      <span>
+        <a href="delivery.html">доставка</a> ·
+        <a href="return.html">возврат</a> ·
+        <a href="offer.html">оферта</a> ·
+        <a href="public-offer.html">публичная оферта</a> ·
+        <a href="privacy.html">политика</a> ·
+        <a href="archive.html">архив</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ НАСТРОЙКИ ============ -->
+<aside class="settings" id="settings" aria-label="Настройки">
+  <div class="settings__head">
+    <h3>настройки</h3>
+    <button class="icon-btn" id="closeSettings" aria-label="Закрыть">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="settings__body">
+    <div class="settings__group">
+      <div class="settings__label">цвет кнопок <b id="hexOut">#FF217D</b></div>
+      <div class="swatches" id="swatches"></div>
+    </div>
+
+    <div class="settings__group">
+      <div class="settings__label">свой цвет</div>
+      <div class="color-row">
+        <input type="color" id="colorPicker" value="#ff217d">
+        <input type="text" id="colorHex" placeholder="#FF217D" maxlength="7">
+        <button class="btn btn--sm" id="applyHex">ок</button>
+      </div>
+    </div>
+
+    <div class="settings__group">
+      <div class="settings__label">тема</div>
+      <div class="preview__row" id="themeRow">
+<button class="btn btn--sm theme-btn" data-mode="light">светлая</button>
+      <button class="btn btn--sm theme-btn" data-mode="dark">тёмная</button>
+      <button class="btn btn--sm theme-btn" data-mode="auto">как в системе</button>
+      </div>
+    </div>
+
+    <div class="settings__group">
+      <label class="switch">
+        <span class="switch__text">случайный цвет при заходе</span>
+        <input type="checkbox" id="randomToggle" checked>
+        <span class="switch__track"></span>
+      </label>
+    </div>
+
+    <div class="settings__group">
+      <button class="btn btn--plain btn--block" id="randomizeNow">случайный цвет</button>
+      <button class="btn btn--plain btn--block" id="resetTheme" style="margin-top:6px">сбросить</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ КОРЗИНА ============ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer" id="cartDrawer" aria-label="Корзина">
+  <div class="drawer__head">
+    <h3>корзина</h3>
+    <button class="icon-btn" id="closeCart" aria-label="Закрыть">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot" id="cartFoot"></div>
+</aside>
+
+<aside class="drawer" id="checkoutDrawer" aria-label="Оформление">
+  <div class="drawer__head">
+    <h3>оформление</h3>
+    <button class="icon-btn" id="closeCheckout" aria-label="Закрыть">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body" id="checkoutBody"></div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/products.js?v=19"></script>
+<script src="assets/js/theme.js?v=19"></script>
+<script src="assets/js/app.js?v=19"></script>
+</body>
+</html>

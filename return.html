@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff217d">
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+<title>возврат — parapsychosis</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__row">
+    <a href="index.html" class="logo">parapsychosis</a>
+    <nav class="nav">
+      <a href="index.html#stock">наличие</a>
+      <a href="archive.html">история</a>
+      <a href="delivery.html">доставка</a>
+      <a href="return.html">возврат</a>
+      <a href="offer.html">оферта</a>
+    </nav>
+    <div class="header__actions">
+      <a href="index.html#stock" class="btn btn--sm">в наличие</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="page">
+    <h1>возврат</h1>
+
+    <h2>условия</h2>
+    <ul>
+      <li>На возврат есть 14 дней с момента, как товар к тебе доехал.</li>
+      <li>Вещь должна быть без следов носки, с бирками и в исходном виде.</li>
+      <li>Сначала напиши нам — вместе решим, как оформить возврат.</li>
+    </ul>
+
+    <h2>связь</h2>
+    <p>Вопросы по возврату — в
+      <a href="https://vk.ru/club241979595" target="_blank" rel="noopener">группе во ВКонтакте</a>.
+      Обычно отвечаем в течение дня.</p>
+
+    <h2>заявление на возврат товара</h2>
+    <p>Ниже — готовый текст заявления. Заполни форму, нажми «собрать заявление»,
+    скопируй результат и отправь нам вместе с товаром.</p>
+
+    <div class="statement" id="statement"></div>
+
+    <div class="statement-actions">
+      <button class="btn btn--sm" id="buildStatement">собрать заявление</button>
+      <button class="btn btn--sm btn--plain" id="copyStatement">скопировать</button>
+      <span class="form__msg" id="copyMsg"></span>
+    </div>
+
+    <h2>форма</h2>
+
+    <div class="form">
+      <div class="form__grid">
+        <div class="field field--wide">
+          <label for="r-name">ФИО</label>
+          <input id="r-name" type="text" placeholder="Иванов Иван Иванович">
+        </div>
+        <div class="field field--wide">
+          <label for="r-addr">адрес</label>
+          <input id="r-addr" type="text" placeholder="город, улица, дом, квартира">
+        </div>
+        <div class="field">
+          <label for="r-ps">паспорт: серия</label>
+          <input id="r-ps" type="text" placeholder="0000">
+        </div>
+        <div class="field">
+          <label for="r-pn">паспорт: №</label>
+          <input id="r-pn" type="text" placeholder="000000">
+        </div>
+        <div class="field field--wide">
+          <label for="r-pw">паспорт выдан</label>
+          <input id="r-pw" type="text" placeholder="кем и когда">
+        </div>
+        <div class="field field--wide">
+          <label for="r-phone">телефон</label>
+          <input id="r-phone" type="tel" placeholder="+7 900 000-00-00">
+        </div>
+        <div class="field">
+          <label for="r-order">заказ №</label>
+          <input id="r-order" type="text" placeholder="PS-XXXXXX">
+        </div>
+        <div class="field">
+          <label for="r-date">дата покупки</label>
+          <input id="r-date" type="text" placeholder="дд.мм.гггг">
+        </div>
+        <div class="field field--wide">
+          <label for="r-item">товар</label>
+          <input id="r-item" type="text" placeholder="название вещи">
+        </div>
+        <div class="field">
+          <label for="r-sum">сумма возврата</label>
+          <input id="r-sum" type="text" placeholder="3500 ₽">
+        </div>
+        <div class="field">
+          <label for="r-sumword">сумма прописью</label>
+          <input id="r-sumword" type="text" placeholder="Три тысячи пятьсот рублей">
+        </div>
+        <div class="field field--wide">
+          <label for="r-reason">причина возврата</label>
+          <input id="r-reason" type="text" placeholder="не подошёл по размеру">
+        </div>
+        <div class="field field--wide">
+          <label for="r-bank">банковские реквизиты</label>
+          <textarea id="r-bank" placeholder="наименование банка, БИК, корректный счёт, расчётный счёт"></textarea>
+        </div>
+        <div class="field field--wide">
+          <label for="r-sdate">дата заявления</label>
+          <input id="r-sdate" type="text" placeholder="дд.мм.гггг">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom">
+      <span>parapsychosis</span>
+      <div class="footer__links">
+        <a href="https://t.me/parapsychosis13" target="_blank" rel="noopener">телеграм</a>
+        <a href="https://vk.ru/club241979595" target="_blank" rel="noopener">вконтакте</a>
+      </div>
+      <span>
+        <a href="index.html">наличие</a> ·
+        <a href="delivery.html">доставка</a> ·
+        <a href="offer.html">оферта</a> ·
+        <a href="public-offer.html">публичная оферта</a> ·
+        <a href="privacy.html">политика</a> ·
+        <a href="archive.html">архив</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/theme.js?v=19"></script>
+<script>
+const SITE = 'parapsychosis';
+const VK = 'https://vk.ru/club241979595';
+const SELLER = '[продавец: ФИО, ИНН, ОГРНИП — впиши свои реквизиты]';
+
+const blanks = {
+  from: '____________________',
+  addr: '____________________',
+  ps:   '________',
+  pn:   '__________',
+  pw:   '____________________',
+  phone:'____________________',
+  order:'__________',
+  date: '«____» __________ 20___ г.',
+  item: '____________________',
+  sum:  '____________________',
+  sumw: '____________________',
+  why:  '________________________________________',
+  bank: '________________________________________',
+  sdate:'«____» __________ 20___ г.',
+  sign: '______________'
+};
+
+/* берёт значение поля, а если его нет или пусто — ставит прочерк */
+function v(id, blankKey) {
+  const el = document.getElementById(id);
+  const val = el ? (el.value || '').trim() : '';
+  return val || blanks[blankKey || id.slice(2)] || '____________________';
+}
+
+function statementText() {
+  return [
+    'ЗАЯВЛЕНИЕ О ВОЗВРАТЕ ТОВАРА',
+    '',
+    'Прежде чем оформить возврат, свяжитесь с нами — мы подскажем, как лучше поступить',
+    'в вашей ситуации: ' + VK + '.',
+    '',
+    'Кому:',
+    SELLER,
+    '',
+    'от ' + blanks.from,
+    'проживающего(ей) по адресу:',
+    v('r-addr'),
+    '',
+    'паспорт: серия ' + v('r-ps') + '  № ' + v('r-pn'),
+    'выдан:',
+    v('r-pw'),
+    '',
+    'телефон:',
+    v('r-phone'),
+    '',
+    'ЗАЯВЛЕНИЕ О ВОЗВРАТЕ ТОВАРА.  ЗАКАЗ № ' + v('r-order'),
+    '',
+    v('r-date') + ' я приобрёл(а) товар',
+    v('r-item') + ' на сайте ' + SITE + '.',
+    '',
+    'Товар не был в использовании, сохранил товарный вид и потребительские свойства,',
+    'не входит в перечень товаров, не подлежащих возврату и обмену.',
+    '',
+    'На основании п. 2 ст. 25 Закона РФ от 07.02.1992 № 2300-1 «О защите прав потребителей»',
+    'я отказываюсь от исполнения договора купли-продажи и прошу вернуть мне уплаченную',
+    'за товар денежную сумму в размере ' + v('r-sum') + ' (' + v('r-sumword') + ').',
+    '',
+    'Возврат связан с тем, что',
+    v('r-reason', 'why') + ' (причина возврата).',
+    '',
+    'Денежные средства прошу перечислить по банковским реквизитам:',
+    v('r-bank'),
+    '',
+    v('r-sdate') + '        ' + blanks.sign + ' (' + v('r-name') + ')',
+    '',
+    'Your Phone: ' + v('r-phone')
+  ].join('\n');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  Theme.init();
+
+  /* подставляем сохранённые данные из прошлого заказа */
+  try {
+    const saved = JSON.parse(localStorage.getItem('shop.contacts')) || {};
+    const map = { 'r-name': saved.name, 'r-addr': saved.addr, 'r-phone': saved.phone };
+    for (const [id, val] of Object.entries(map)) {
+      if (val) document.getElementById(id).value = val;
+    }
+  } catch {}
+
+  document.getElementById('statement').textContent = statementText();
+
+  document.getElementById('buildStatement').addEventListener('click', () => {
+    document.getElementById('statement').textContent = statementText();
+    document.getElementById('copyMsg').textContent = 'готово';
+    document.getElementById('copyMsg').className = 'form__msg';
+  });
+
+  document.getElementById('copyStatement').addEventListener('click', () => {
+    const text = statementText();
+    const msg = document.getElementById('copyMsg');
+    const done = () => { msg.textContent = 'скопировано'; msg.className = 'form__msg'; };
+    const failed = () => {
+      msg.textContent = 'не вышло — выдели текст и скопируй вручную';
+      msg.className = 'form__msg err';
+      window.getSelection().selectAllChildren(document.getElementById('statement'));
+    };
+
+    /* буфер обмена может быть недоступен или висеть — всегда есть запасной путь */
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;left:-9999px;top:0';
+      document.body.appendChild(ta);
+      ta.select();
+      let copied = false;
+      try { copied = document.execCommand('copy'); } catch {}
+      ta.remove();
+      copied ? done() : failed();
+    };
+
+    if (!navigator.clipboard || !navigator.clipboard.writeText) return fallback();
+
+    let settled = false;
+    const timer = setTimeout(() => { if (!settled) { settled = true; fallback(); } }, 500);
+    navigator.clipboard.writeText(text).then(() => {
+      if (settled) return;
+      settled = true; clearTimeout(timer); done();
+    }, () => {
+      if (settled) return;
+      settled = true; clearTimeout(timer); fallback();
+    });
+  });
+});
+</script>
+
+</body>
+</html>

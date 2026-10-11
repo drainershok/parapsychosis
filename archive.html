@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff217d">
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+<title>история — parapsychosis</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__row">
+    <a href="index.html" class="logo">parapsychosis</a>
+    <nav class="nav">
+      <a href="index.html#stock">наличие</a>
+      <a href="archive.html">история</a>
+      <a href="delivery.html">доставка</a>
+      <a href="return.html">возврат</a>
+      <a href="offer.html">оферта</a>
+    </nav>
+    <div class="header__actions">
+      <a href="index.html#stock" class="btn btn--sm">в наличие</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="page">
+    <h1>история</h1>
+    <p>Прошедшие дропы. Каждый выпуск выходил ограниченным тиражом и больше не повторяется.</p>
+    <div class="history" id="archiveList"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom">
+      <span>parapsychosis</span>
+      <div class="footer__links">
+        <a href="https://t.me/parapsychosis13" target="_blank" rel="noopener">телеграм</a>
+        <a href="https://vk.ru/club241979595" target="_blank" rel="noopener">вконтакте</a>
+      </div>
+      <span>
+        <a href="index.html">наличие</a> ·
+        <a href="delivery.html">доставка</a> ·
+        <a href="return.html">возврат</a> ·
+        <a href="offer.html">оферта</a> ·
+        <a href="public-offer.html">публичная оферта</a> ·
+        <a href="privacy.html">политика</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/products.js?v=19"></script>
+<script src="assets/js/theme.js?v=19"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  Theme.init();
+  const box = document.getElementById('archiveList');
+
+  if (!HISTORY.length) {
+    box.innerHTML = '<div class="empty"><b>пока пусто</b>Дропы появятся здесь после первых выпусков. Добавляются в assets/js/products.js</div>';
+    return;
+  }
+
+  box.innerHTML = HISTORY.map(h => `
+    <div class="history__row">
+      <div class="history__date">${h.date || ''}</div>
+      <div>
+        <div class="history__title">${h.title || ''}</div>
+        ${h.note ? `<div class="history__note">${h.note}</div>` : ''}
+      </div>
+    </div>`).join('');
+});
+</script>
+
+</body>
+</html>
