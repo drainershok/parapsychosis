@@ -109,12 +109,13 @@ button { cursor: pointer; background: none; border: 0; }
 }
 .header__row { display: flex; align-items: center; gap: 32px; height: 66px; }
 
-.logo { font-weight: 600; font-size: 15px; letter-spacing: .18em; text-transform: uppercase; }
+.logo { font-weight: 600; font-size: 15px; letter-spacing: .18em; text-transform: uppercase; transition: color .15s; }
+.logo:hover { color: var(--accent); }
 .logo span { color: var(--muted); }
 
 .nav { display: flex; gap: 24px; margin-left: auto; }
 .nav a { color: var(--muted); font-size: 12px; letter-spacing: .06em; transition: color .15s; }
-.nav a:hover { color: var(--text); }
+.nav a:hover { color: var(--accent); }
 
 .header__actions { display: flex; align-items: center; gap: 10px; }
 
@@ -530,12 +531,11 @@ button { cursor: pointer; background: none; border: 0; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 24px 14px; }
 }
 
-/* на узких телефонах иконки соцсетей уступают место логотипу,
-   ссылки на них остаются в подвале */
+/* на узких телефонах иконки соцсетей остаются видны (ТГ и ВК) */
 @media (max-width: 480px) {
-  .header__row { gap: 16px; }
-  .logo { font-size: 13px; letter-spacing: .12em; }
-  .header__actions { gap: 8px; }
-  .socials { display: none; }
+  .header__row { gap: 10px; }
+  .logo { font-size: 12px; letter-spacing: .08em; }
+  .header__actions { gap: 6px; margin-left: auto; }
+  .nav { display: none; }
   .footer__bottom { gap: 12px; }
 }

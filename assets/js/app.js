@@ -555,7 +555,7 @@ function renderCheckout() {
     const found = promoLookup(code);
     if (!found) {
       state.promo = null;
-      msg.textContent = code ? 'такого промокода нет' : 'введи промокод';
+      msg.textContent = code ? 'такого промокода нет' : 'введите промокод';
       msg.className = 'form__msg err';
       updateCheckoutTotals();
       return;
@@ -597,11 +597,11 @@ function placeOrder() {
   $$('.field').forEach(f => { f.classList.remove('is-error'); const e = f.querySelector('.field__err'); if (e) e.textContent = ''; });
 
   const rules = [
-    ['f-name', v => v.trim().length >= 2 || 'введи ФИО'],
-    ['f-phone', v => v.replace(/\D/g, '').length >= 10 || 'проверь телефон'],
-    ['f-email', v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.trim()) || 'проверь e-mail'],
-    ['f-index', v => v.trim().length >= 3 || 'введи почтовый индекс'],
-    ['f-addr', v => v.trim().length >= 4 || 'введи адрес']
+    ['f-name', v => v.trim().length >= 2 || 'введите ФИО'],
+    ['f-phone', v => v.replace(/\D/g, '').length >= 10 || 'проверьте телефон'],
+    ['f-email', v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.trim()) || 'проверьте e-mail'],
+    ['f-index', v => v.trim().length >= 3 || 'введите почтовый индекс'],
+    ['f-addr', v => v.trim().length >= 4 || 'введите адрес']
   ];
 
   let ok = true;
@@ -611,7 +611,7 @@ function placeOrder() {
     if (res !== true) { markError(id, res); ok = false; }
   });
 
-  if (!$('#agree').checked) { toast('подтверди согласие с офертой'); ok = false; }
+  if (!$('#agree').checked) { toast('подтвердите согласие с офертой'); ok = false; }
   if (!ok) return;
 
   if ($('#remember').checked) {

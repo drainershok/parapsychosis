@@ -7,9 +7,9 @@
 <meta http-equiv="Cache-Control" content="no-store, must-revalidate">
 <title>возврат — parapsychosis</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=21">
-<link rel="icon" type="image/png" href="assets/img/favicon.png?v=21">
-<link rel="apple-touch-icon" href="assets/img/favicon.png?v=21">
+<link rel="stylesheet" href="assets/css/style.css?v=22">
+<link rel="icon" type="image/png" href="assets/img/favicon.png?v=22">
+<link rel="apple-touch-icon" href="assets/img/favicon.png?v=22">
 </head>
 <body>
 
@@ -35,9 +35,9 @@
 
     <h2>условия</h2>
     <ul>
-      <li>На возврат есть 14 дней с момента, как товар к тебе доехал.</li>
+      <li>На возврат есть 14 дней с момента получения товара.</li>
       <li>Вещь должна быть без следов носки, с бирками и в исходном виде.</li>
-      <li>Сначала напиши нам — вместе решим, как оформить возврат.</li>
+      <li>Сначала напишите нам — вместе решим, как оформить возврат.</li>
     </ul>
 
     <h2>связь</h2>
@@ -46,8 +46,8 @@
       Обычно отвечаем в течение дня.</p>
 
     <h2>заявление на возврат товара</h2>
-    <p>Ниже — готовый текст заявления. Заполни форму, нажми «собрать заявление»,
-    скопируй результат и отправь нам вместе с товаром.</p>
+    <p>Ниже — готовый текст заявления. Заполните форму, нажмите «собрать заявление»,
+    скопируйте результат и отправьте нам вместе с товаром.</p>
 
     <div class="statement" id="statement"></div>
 
@@ -142,11 +142,11 @@
   </div>
 </footer>
 
-<script src="assets/js/theme.js?v=21"></script>
+<script src="assets/js/theme.js?v=22"></script>
 <script>
 const SITE = 'parapsychosis';
 const VK = 'https://vk.ru/club241979595';
-const SELLER = '[продавец: ФИО, ИНН, ОГРНИП — впиши свои реквизиты]';
+const SELLER = '[продавец: ФИО, ИНН, ОГРНИП — впишите реквизиты]';
 
 const blanks = {
   from: '____________________',
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const msg = document.getElementById('copyMsg');
     const done = () => { msg.textContent = 'скопировано'; msg.className = 'form__msg'; };
     const failed = () => {
-      msg.textContent = 'не вышло — выдели текст и скопируй вручную';
+      msg.textContent = 'не вышло — выделите текст и скопируйте вручную';
       msg.className = 'form__msg err';
       window.getSelection().selectAllChildren(document.getElementById('statement'));
     };
