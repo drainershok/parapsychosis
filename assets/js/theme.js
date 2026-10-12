@@ -2,16 +2,9 @@
    Без неона и свечений — только плоская заливка. */
 
 const PALETTE = [
-  { name: 'pink',   rgb: [255, 33, 125] },
-  { name: 'violet', rgb: [171, 36, 255] },
-  { name: 'cyan',   rgb: [  0, 178, 214] },
-  { name: 'lime',   rgb: [ 90, 196,  50] },
-  { name: 'orange', rgb: [235, 106,  36] },
-  { name: 'red',    rgb: [216,  44,  62] },
-  { name: 'green',  rgb: [ 26, 140,  96] },
-  { name: 'blue',   rgb: [ 32,  92, 210] },
-  { name: 'sand',   rgb: [176, 132,  78] },
-  { name: 'ink',    rgb: [ 26,  26,  28] }
+  { name: 'pink',  rgb: [255, 33, 125] },
+  { name: 'ink',   rgb: [ 26,  26,  28] },
+  { name: 'white', rgb: [255, 255, 255] }
 ];
 
 const STORE = {

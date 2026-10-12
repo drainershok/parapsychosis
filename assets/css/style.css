@@ -190,7 +190,7 @@ button { cursor: pointer; background: none; border: 0; }
 }
 .settings__label b { color: var(--text); font-weight: 500; font-family: ui-monospace, monospace; letter-spacing: 0; }
 
-.swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .swatch {
   aspect-ratio: 1;
   border: 1px solid var(--line);
