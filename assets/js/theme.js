@@ -111,3 +111,12 @@ const Theme = {
 };
 
 window.Theme = Theme;
+
+/* подсветка пункта меню, соответствующего текущей странице */
+document.addEventListener('DOMContentLoaded', () => {
+  const file = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a').forEach(a => {
+    const target = (a.getAttribute('href') || '').split('#')[0] || file;
+    if (target === file) a.setAttribute('aria-current', 'page');
+  });
+});

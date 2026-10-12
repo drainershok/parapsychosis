@@ -116,6 +116,7 @@ button { cursor: pointer; background: none; border: 0; }
 .nav { display: flex; gap: 24px; margin-left: auto; }
 .nav a { color: var(--muted); font-size: 12px; letter-spacing: .06em; transition: color .15s; }
 .nav a:hover { color: var(--accent); }
+.nav a[aria-current="page"] { color: var(--accent); }
 
 .header__actions { display: flex; align-items: center; gap: 10px; }
 
